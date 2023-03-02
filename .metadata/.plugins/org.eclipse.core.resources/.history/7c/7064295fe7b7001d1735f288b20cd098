@@ -1,0 +1,250 @@
+package view;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JTextField;
+import javax.swing.JScrollPane;
+import javax.swing.JButton;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.List;
+import java.awt.Choice;
+import java.awt.TextArea;
+import java.awt.Button;
+import javax.swing.JMenuBar;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JMenu;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JRadioButtonMenuItem;
+import javax.swing.JMenuItem;
+
+public class TelaProduto {
+
+	private JFrame frmCadastroDePratos;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					TelaProduto window = new TelaProduto();
+					window.frmCadastroDePratos.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public TelaProduto() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frmCadastroDePratos = new JFrame();
+		frmCadastroDePratos.getContentPane().setBackground(new Color(240, 240, 240));
+		frmCadastroDePratos.setBounds(100, 100, 450, 300);
+		frmCadastroDePratos.setSize(800,600);
+		frmCadastroDePratos.setTitle("Cadastro de Pratos");
+		frmCadastroDePratos.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmCadastroDePratos.getContentPane().setLayout(null);
+		
+		Label label = new Label("Codigo:");
+		label.setBounds(582, 107, 50, 22);
+		frmCadastroDePratos.getContentPane().add(label);
+		
+		Label label_1 = new Label("Nome do Prato:");
+		label_1.setBounds(10, 107, 87, 22);
+		frmCadastroDePratos.getContentPane().add(label_1);
+		
+		TextField textField_1 = new TextField();
+		textField_1.setBounds(94, 107, 250, 22);
+		frmCadastroDePratos.getContentPane().add(textField_1);
+		
+		Label label_2 = new Label("1° Ingrediente:");
+		label_2.setBounds(10, 135, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_2);
+		
+		Choice choice = new Choice();
+		choice.setBounds(94, 137, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice);
+		
+		Label label_3 = new Label("2° Ingrediente:");
+		label_3.setBounds(10, 163, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3);
+		
+		Choice choice_1 = new Choice();
+		choice_1.setBounds(94, 165, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1);
+		
+		Label label_3_1 = new Label("3° Ingrediente:");
+		label_3_1.setBounds(10, 191, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3_1);
+		
+		Label label_3_1_1 = new Label("4° Ingrediente:");
+		label_3_1_1.setBounds(10, 219, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3_1_1);
+		
+		Label label_3_1_2 = new Label("5° Ingrediente:");
+		label_3_1_2.setBounds(10, 247, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3_1_2);
+		
+		Label label_3_1_3 = new Label("6° Ingrediente:");
+		label_3_1_3.setBounds(10, 275, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3_1_3);
+		
+		Label label_3_1_4 = new Label("7° Ingrediente:");
+		label_3_1_4.setBounds(10, 303, 83, 22);
+		frmCadastroDePratos.getContentPane().add(label_3_1_4);
+		
+		Choice choice_1_1 = new Choice();
+		choice_1_1.setBounds(94, 193, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1_1);
+		
+		Choice choice_1_2 = new Choice();
+		choice_1_2.setBounds(94, 221, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1_2);
+		
+		Choice choice_1_3 = new Choice();
+		choice_1_3.setBounds(94, 249, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1_3);
+		
+		Choice choice_1_4 = new Choice();
+		choice_1_4.setBounds(94, 277, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1_4);
+		
+		Choice choice_1_5 = new Choice();
+		choice_1_5.setBounds(94, 305, 250, 20);
+		frmCadastroDePratos.getContentPane().add(choice_1_5);
+		
+		Label label_4 = new Label("Preço:");
+		label_4.setBounds(365, 107, 45, 22);
+		frmCadastroDePratos.getContentPane().add(label_4);
+		
+		TextField textField_2 = new TextField();
+		textField_2.setBounds(461, 107, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2);
+		
+		Label label_5 = new Label("Quantidade:");
+		label_5.setBounds(365, 135, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5);
+		
+		TextField textField_2_1 = new TextField();
+		textField_2_1.setBounds(461, 135, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_1);
+		
+		TextField textField_2_2 = new TextField();
+		textField_2_2.setBounds(461, 163, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_2);
+		
+		TextField textField_2_3 = new TextField();
+		textField_2_3.setBounds(461, 191, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_3);
+		
+		TextField textField_2_4 = new TextField();
+		textField_2_4.setBounds(461, 219, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_4);
+		
+		TextField textField_2_5 = new TextField();
+		textField_2_5.setBounds(461, 247, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_5);
+		
+		TextField textField_2_6 = new TextField();
+		textField_2_6.setBounds(461, 275, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_6);
+		
+		TextField textField_2_7 = new TextField();
+		textField_2_7.setBounds(461, 303, 101, 22);
+		frmCadastroDePratos.getContentPane().add(textField_2_7);
+		
+		Label label_5_1 = new Label("Quantidade:");
+		label_5_1.setBounds(365, 163, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_1);
+		
+		Label label_5_2 = new Label("Quantidade:");
+		label_5_2.setBounds(365, 191, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_2);
+		
+		Label label_5_3 = new Label("Quantidade:");
+		label_5_3.setBounds(365, 219, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_3);
+		
+		Label label_5_4 = new Label("Quantidade:");
+		label_5_4.setBounds(365, 247, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_4);
+		
+		Label label_5_5 = new Label("Quantidade:");
+		label_5_5.setBounds(365, 275, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_5);
+		
+		Label label_5_6 = new Label("Quantidade:");
+		label_5_6.setBounds(365, 303, 72, 22);
+		frmCadastroDePratos.getContentPane().add(label_5_6);
+		
+		Label label_6 = new Label("Pratos Cadastrados:");
+		label_6.setBounds(10, 344, 113, 22);
+		frmCadastroDePratos.getContentPane().add(label_6);
+		
+		List list = new List();
+		list.setBounds(10, 369, 552, 120);
+		frmCadastroDePratos.getContentPane().add(list);
+		
+		Button button = new Button("Novo");
+		button.setBounds(20, 496, 87, 33);
+		frmCadastroDePratos.getContentPane().add(button);
+		
+		Button button_1 = new Button("Salvar");
+		button_1.setBounds(122, 496, 87, 33);
+		frmCadastroDePratos.getContentPane().add(button_1);
+		
+		Button button_2 = new Button("Apagar");
+		button_2.setBounds(226, 496, 87, 33);
+		frmCadastroDePratos.getContentPane().add(button_2);
+		
+		Label label_7 = new Label("Registros:");
+		label_7.setBounds(329, 507, 62, 22);
+		frmCadastroDePratos.getContentPane().add(label_7);
+		
+		Button button_2_1 = new Button("Sair");
+		button_2_1.setBounds(475, 496, 87, 33);
+		frmCadastroDePratos.getContentPane().add(button_2_1);
+		
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBounds(0, 0, 784, 81);
+		frmCadastroDePratos.getContentPane().add(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("Pratos");
+		mnNewMenu.setIcon(new ImageIcon(TelaProduto.class.getResource("/icones/pratos_resized.png")));
+		mnNewMenu.setSelectedIcon(null);
+		mnNewMenu.setHorizontalAlignment(SwingConstants.CENTER);
+		menuBar.add(mnNewMenu);
+		
+		JMenu mnNewMenu_1 = new JMenu("Acompanhamento");
+		mnNewMenu_1.setIcon(new ImageIcon(TelaProduto.class.getResource("/icones/acompanhamento_resized.png")));
+		mnNewMenu_1.setHorizontalAlignment(SwingConstants.CENTER);
+		menuBar.add(mnNewMenu_1);
+		
+		JMenu mnNewMenu_2 = new JMenu("Sobremesas");
+		mnNewMenu_2.setIcon(new ImageIcon(TelaProduto.class.getResource("/icones/sobremesas_resized.png")));
+		mnNewMenu_2.setBackground(new Color(0, 0, 0));
+		mnNewMenu_2.setHorizontalAlignment(SwingConstants.CENTER);
+		menuBar.add(mnNewMenu_2);
+		
+		TextField textField = new TextField();
+		textField.setBounds(638, 107, 87, 22);
+		frmCadastroDePratos.getContentPane().add(textField);
+	}
+}
